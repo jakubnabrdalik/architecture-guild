@@ -1,0 +1,27 @@
+plugins {
+    id 'io.franzbecker.gradle-lombok' version '1.14'
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+lombok {
+    version = '1.18.2'
+    sha256 = ""
+}
+
+dependencies {
+	compile 'com.structurizr:structurizr-client:1.3.0'
+}
+
+mainClassName = "eu.solidcraft.c4diagrams.Structurizr"
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
